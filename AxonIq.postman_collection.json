@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "5c194200-9e87-403b-b96b-db521ca5f813",
+		"name": "AxonIq",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create shelf",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"shelfId\": \"A002\",\r\n\t\"name\": \"My Library2\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/library/shelf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"library",
+						"shelf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"isbn\":\"123460\",\r\n\t\"title\": \"My Title\",\r\n\t\"shelfId\": \"A001\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/library/shelf/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"library",
+						"shelf",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the shelf",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET  Books from Shelf",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
